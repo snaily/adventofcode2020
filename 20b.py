@@ -172,12 +172,12 @@ def rotate_image(image):
         rotated.append('\n')
     return rotated
 
-# ew. better hope there are monsters1
+# ew. better hope there are monsters!
 rotations = 0
 while not color_monsters(image):
     image = rotate_image(image)
     rotations += 1
-    if rotations == 3:
+    if rotations == 4:
         image = list(reversed(image))[1:] + ['\n']
 
 print(''.join(image))
